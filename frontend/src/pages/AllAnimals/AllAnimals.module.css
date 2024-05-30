@@ -1,0 +1,33 @@
+.contanier{
+    width: 999px;
+    margin: auto;
+    left: 0;
+    margin-top: 90px;
+}
+
+.subheading {
+    font-size: 24px;
+    color: #bfa5a7;
+  }
+
+
+.tabContanier{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab{
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #574143;
+    border: 1px solid rgba(191, 165, 167, 1);
+}
+
+.activeTab{
+    background-color: rgba(190, 52, 85, 0.2);
+    color: rgba(190, 52, 85, 1);
+    border: 1px solid rgba(190, 52, 85, 1);
+}

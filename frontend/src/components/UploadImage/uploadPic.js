@@ -1,0 +1,34 @@
+import React from 'react'
+
+function UploadPic(props) {
+  return (
+    <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "10px",
+          }}
+        >
+          <input
+            type="file"
+            name="image"
+            accept="image/*"
+            style={{ display: "none" }}
+            id="imageInput"
+            onChange={props.onChange}
+          />
+          <label
+            htmlFor="imageInput"
+            style={{
+              cursor: "pointer",
+              color: "#026CDF",
+              textDecoration: "underline",
+            }}
+          >
+            Choose Image
+          </label>
+        </div>
+  );
+}
+
+export default UploadPic;

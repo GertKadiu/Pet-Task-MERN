@@ -1,0 +1,16 @@
+
+.links {
+  text-decoration: none;
+  color: #574143;
+  text-transform:none;
+  display: flex;
+  align-items: center;
+}
+
+.activeLink {
+  font-weight: bold;
+  color: #574143;
+  text-decoration: underline;
+  text-transform:none;
+  
+}

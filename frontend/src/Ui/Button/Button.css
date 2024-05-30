@@ -1,0 +1,107 @@
+.creteBtn {
+    border: 2px solid #FFFFFF;
+    background-color: rgba(190, 52, 85, 1);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 413px;
+  }
+
+  .open{
+    background-color: #be3455;
+    color: #ffffff;
+    width: 238px;
+    height: 48px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
+  .open:hover {
+    background-color: #8f0b2a;
+  }
+  
+
+  .delete{
+    color: #FFFFFF;
+    border: none;
+    background-color: #EF4444;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+    width: 200px;
+    
+  }
+  
+  .editBtn {
+    background-color: #026cdf;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    border: none;
+    text-decoration: none;
+    width: 200px;
+  }
+  
+ 
+  
+
+  .cancelBtn {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgba(87, 65, 67, 1);
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: 1px solid rgba(87, 65, 67, 1);
+    font-size: 16px;
+    width: 413px;
+  }
+  
+  
+  .disabled {
+    background-color: #666666;
+    border: 2px solid #FFFFFF;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 413px;
+  }
+
+
+  .sendBtn{
+    background-color: #be3455;
+    color: #ffffff;
+    height: 38px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+ 
+
+
+  .ViewBtn {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgba(87, 65, 67, 1);
+    padding: 3px 0px;
+    border-radius: 5px;
+    border: 1px solid rgba(87, 65, 67, 1);
+    font-size: 16px;
+    width: 70px;
+  }
+
+
+  .ViewBtn:hover{
+    color: #FFFFFF;
+    background-color: rgba(87, 65, 67, 1);;
+  }
