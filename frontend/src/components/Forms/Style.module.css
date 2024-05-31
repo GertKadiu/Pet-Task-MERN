@@ -5,3 +5,52 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
+
+
+  .contanier{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    gap: 20px;
+    ;
+  }
+
+  .input{
+    width: 413px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .inlineInput{
+    width: 413px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .btnContanier{
+    display: flex;
+    gap: 20px;
+  }
+
+  
+
+  @media (max-width:1213px) {
+     .contanier{
+    display: flex;
+    flex-direction: column;
+  }.btnContanier{
+    display: flex;
+    flex-direction: column;
+  }
+  }
+
+
+  @media (max-width:551px) {
+  .input{
+  width: 350px;
+ }.inlineInput{
+  width: 350px;
+ }
+ }

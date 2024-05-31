@@ -23,12 +23,7 @@ export default function AllAnimals() {
   return (
     <div className={style.contanier}>
       <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "20px",
-        }}
+        className={style.content}
       >
         <h2 className={style.subheading}>Learn more about your pet friend!</h2>
         <Search onChange={handleChange} value={searchByName} />

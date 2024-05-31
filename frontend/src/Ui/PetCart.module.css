@@ -3,7 +3,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap:50px;
+  }
+
+  .btnContanier{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
   }
   
   .grid {
@@ -19,7 +27,6 @@
     height: 250px;
     border-radius: 5px;
     object-fit: cover;
-    /* margin-left: 50px; */
 }
 
 .name {
@@ -54,7 +61,7 @@
 .description{
     font-size: 14px;
     margin-bottom: 10px;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .label{
@@ -67,13 +74,13 @@
 
 .border{
     border: 1px solid #ebebeb;
-    width: 400px;
+    width: 300px;
 }
 
 .space{
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 300px;
     color: rgba(87, 65, 67, 1);
 }
 
@@ -98,4 +105,31 @@
 
 .link{
     text-decoration: none;
+}
+
+
+@media (max-width:990px) {
+    .cart {
+       
+        display: flex;
+    flex-direction: column;
+   
+      }
+}
+
+
+@media (max-width:540px) {
+    .cart {
+        max-width: 400px;
+        gap: 10px;
+      }
+      .img{
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+    }.btnContanier{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
 }

@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Card from "../../Ui/Card";
 import BasicModal from "../Modal/Modal";
 import styles from "./AnimalPost.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 export default function AnimalPost({
   animals,
@@ -13,6 +17,10 @@ export default function AnimalPost({
   handleOpen,
 }) {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    AOS.init({  once: true }); 
+  }, []);
 
   const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -47,7 +55,7 @@ export default function AnimalPost({
       {type === "cats" && (
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="500"
           className={styles.grid}
         >
           {animals.map((animal) => (
@@ -63,7 +71,7 @@ export default function AnimalPost({
       {type === "dogs" && (
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="500"
           className={styles.grid}
         >
           {animals.map((animal) => (
@@ -79,7 +87,7 @@ export default function AnimalPost({
       {type === "birds" && (
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="500"
           className={styles.grid}
         >
           {animals.map((animal) => (

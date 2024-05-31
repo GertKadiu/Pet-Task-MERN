@@ -6,6 +6,10 @@
     border: 1px solid rgba(191, 165, 167, 1);
 }
 
+.tab:hover{
+    cursor: pointer;
+}
+
 .activeTab{
     background-color: rgba(190, 52, 85, 0.2);
     color: rgba(190, 52, 85, 1);

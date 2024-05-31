@@ -26,11 +26,12 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "#574143",
   flex: 1,
+  width:310
 }));
 export default function PrimarySearchAppBar(props) {
   return (
     <Search
-      style={{ backgroundColor: "#F5F4F7", maxWidth:"265px", height:"48px" }}
+      style={{ backgroundColor: "#F5F4F7", maxWidth:"310px", height:"48px" }}
     >
       <SearchIconWrapper>
         <SearchIcon />

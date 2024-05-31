@@ -31,7 +31,7 @@ function Button(props) {
         return "sendBtn";
 
       default:
-        return "primaryBtn";
+        return "saveBtn";
     }
   };
 

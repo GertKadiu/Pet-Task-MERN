@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 const PetDetailCard = ({ singleAnimal, id, type, handleDelete }) => {
   return (
     <div className={styles.cart}>
+       <div>
+        <img src={singleAnimal.image} alt={`${type}`} className={styles.img} />
+      </div>
       <div
         style={{
           display: "flex",
@@ -117,12 +120,7 @@ const PetDetailCard = ({ singleAnimal, id, type, handleDelete }) => {
         <label className={styles.label}>Description:</label>
         <div className={styles.description}>{singleAnimal.description}</div>
         <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 32,
-          }}
+          className={styles.btnContanier}
         >
           <Button
             btnText="Delete"
@@ -134,9 +132,8 @@ const PetDetailCard = ({ singleAnimal, id, type, handleDelete }) => {
           </Link>
         </div>
       </div>
-      <div>
-        <img src={singleAnimal.image} alt={`${type}`} className={styles.img} />
-      </div>
+      
+       
     </div>
   );
 };

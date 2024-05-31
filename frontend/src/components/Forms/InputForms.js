@@ -21,21 +21,10 @@ export function DogsForm({
       <div>
         <form>
           <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "20px",
-              marginTop: "40px",
-              marginBottom: "50px",
-            }}
+           className={style.contanier}
           >
             <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-                width: "413px",
-              }}
+              className={style.input}
             >
               <Input
                 variant="outlined"
@@ -55,12 +44,7 @@ export function DogsForm({
                 onChange={handleChange}
               />
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "20px",
-                  width: "413px",
-                }}
+                className={style.inlineInput}
               >
                 <Input
                   variant="outlined"
@@ -91,12 +75,7 @@ export function DogsForm({
               />
             </div>
             <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-                width: "413px",
-              }}
+             className={style.input}
             >
               <Input
                 variant="outlined"
@@ -132,9 +111,9 @@ export function DogsForm({
           ) : null}
           <UploadPic onChange={(e) => setFile(e.target.files[0])} />
           <UploadStatus fileUploadError={fileUploadError} filePerc={filePerc} />
-          <div style={{ display: "flex", gap: "20px" }}>
+          <div className={style.btnContanier}>
           <Link to={"/animals"}>
-          <Button type={ButtonTypes.CANCEL} btnText="Cancel" />
+          <Button  type={ButtonTypes.CANCEL} btnText="Cancel" />
         </Link>
             <Button
               type={ButtonTypes.CREATE}
@@ -161,21 +140,10 @@ export function CatsForm({
     <div>
       <form>
         <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-            marginTop: "40px",
-            marginBottom: "40px",
-          }}
+          className={style.contanier}
         >
           <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              width: "413px",
-            }}
+           className={style.input}
           >
             <Input
               variant="outlined"
@@ -198,12 +166,7 @@ export function CatsForm({
             />
           </div>
           <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              width: "413px",
-            }}
+           className={style.input}
           >
             <Input
               variant="outlined"
@@ -239,7 +202,7 @@ export function CatsForm({
         ) : null}
         <UploadPic onChange={(e) => setFile(e.target.files[0])} />
         <UploadStatus fileUploadError={fileUploadError} filePerc={filePerc} />
-        <div style={{ display: "flex", gap: "20px" }}>
+        <div className={style.btnContanier}>
         <Link to={"/animals"}>
           <Button type={ButtonTypes.CANCEL} btnText="Cancel" />
         </Link>
@@ -262,21 +225,10 @@ export function BirdsForm({
   return (
     <form>
       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "20px",
-          marginTop: "40px",
-          marginBottom: "40px",
-        }}
+        className={style.contanier}
       >
         <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "20px",
-            width: "413px",
-          }}
+          className={style.input}
         >
           <Input
             variant="outlined"
@@ -296,12 +248,7 @@ export function BirdsForm({
           />
 
           <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "20px",
-              width: "413px",
-            }}
+           className={style.inlineInput}
           >
             <Input
               variant="outlined"
@@ -332,12 +279,7 @@ export function BirdsForm({
         </div>
 
         <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "20px",
-            width: "413px",
-          }}
+         className={style.input}
         >
           <Input
             variant="outlined"
@@ -380,7 +322,7 @@ export function BirdsForm({
       ) : null}
       <UploadPic onChange={(e) => setFile(e.target.files[0])} />
       <UploadStatus fileUploadError={fileUploadError} filePerc={filePerc} />
-      <div style={{ display: "flex", gap: "20px" }}>
+      <div className={style.btnContanier}>
         <Link to={"/animals"}>
           <Button type={ButtonTypes.CANCEL} btnText="Cancel" />
         </Link>

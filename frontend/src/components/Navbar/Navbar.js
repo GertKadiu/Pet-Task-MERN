@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.css";
-import { NavLink } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
@@ -17,7 +17,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { FaUserCircle } from "react-icons/fa";
-
+import { useMediaQuery } from "@mui/material";
 
 const drawerWidth = 280;
 
@@ -25,12 +25,18 @@ const navItems = [
   { to: "/", text: "Home" },
   { to: "/aboutUs", text: "About us" },
   { to: "/contactUs", text: "Contact" },
-  { to: "/create", text: "Admin", icon: <FaUserCircle style={{marginLeft:"10px"}} /> },
+  {
+    to: "/create",
+    text: "Admin",
+    icon: <FaUserCircle style={{ marginLeft: "10px" }} />,
+  },
 ];
 
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const isMobile = useMediaQuery("(max-width:654px)");
+  const isSmallScreen = useMediaQuery("(max-width:654px)"); 
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -48,15 +54,17 @@ function Navbar(props) {
         {navItems.map((item) => (
           <ListItem key={item.to} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText 
+              <ListItemText
                 primary={
-                  <NavLink 
-                    to={item.to} 
-                    className={({ isActive }) => isActive ? styles.activeLink : styles.links}
+                  <NavLink
+                    to={item.to}
+                    className={({ isActive }) =>
+                      isActive ? styles.activeLink : styles.links
+                    }
                   >
                     {item.text} {item.icon}
                   </NavLink>
-                } 
+                }
               />
             </ListItemButton>
           </ListItem>
@@ -71,48 +79,61 @@ function Navbar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar 
-        component="nav" 
-        style={{ 
-          backgroundColor: "#fff", 
-          paddingLeft: "70px", 
-          paddingRight: "70px", 
-          boxShadow: "none", 
-          borderBottom: "2px solid #f5f5f5" 
+      <AppBar
+        component="nav"
+        style={{
+          backgroundColor: "#fff",
+          paddingLeft: "40px",
+          paddingRight: "40px",
+          boxShadow: "none",
+          borderBottom: "2px solid #f5f5f5",
         }}
       >
-        <Toolbar>
-          <IconButton
-            color="black"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            <NavLink to="/" className={styles.logoContainer}>
-              <img className={styles.logo} src="/assets/logo.svg" alt="Logo" />
-            </NavLink>
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item.to} sx={{ color: "#574143" }}>
-                <NavLink 
-                  to={item.to} 
-                  className={({ isActive }) => isActive ? styles.activeLink : styles.links}
-                >
-                  {item.text} {item.icon}
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          {isMobile ? (
+            <>
+              <NavLink to="/" className={styles.logoContainer} style={{ flexGrow: 1 }}>
+                <img className={styles.logo} src="/assets/logo.svg" alt="Logo" />
+              </NavLink>
+              <IconButton
+                color="black"
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerToggle}
+                sx={{ display: { sm: "none" } }}
+              >
+                <MenuIcon />
+              </IconButton>
+            </>
+          ) : (
+            <>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+              >
+                <NavLink to="/" className={styles.logoContainer}>
+                  <img className={styles.logo} src="/assets/logo.svg" alt="Logo" />
                 </NavLink>
-              </Button>
-            ))}
-          </Box>
+              </Typography>
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                {navItems.map((item) => (
+                  <Button key={item.to} sx={{ color: "#574143" }}>
+                    <NavLink
+                      to={item.to}
+                      className={({ isActive }) =>
+                        isActive ? styles.activeLink : styles.links
+                      }
+                    >
+                      {item.text} {item.icon}
+                    </NavLink>
+                  </Button>
+                ))}
+              </Box>
+            </>
+          )}
         </Toolbar>
+
       </AppBar>
       <nav>
         <Drawer
@@ -127,7 +148,7 @@ function Navbar(props) {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: isSmallScreen ? '70vw' : drawerWidth, 
             },
           }}
         >

@@ -6,5 +6,4 @@ export const ButtonTypes = {
     DELETE:"DELETE",
     OPEN:"OPEN",
     SEND:"SEND",
-    VIEW:"VIEW"
   };

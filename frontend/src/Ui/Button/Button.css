@@ -7,6 +7,7 @@
     border-radius: 5px;
     font-size: 16px;
     width: 413px;
+    cursor: pointer;
   }
 
   .open{
@@ -25,6 +26,11 @@
   }
   
 
+  .creteBtn:hover {
+    background-color: #8f0b2a;
+  }
+  
+
   .delete{
     color: #FFFFFF;
     border: none;
@@ -34,8 +40,13 @@
     font-size: 16px;
     margin: 10px 0 10px 0;
     width: 200px;
-    
+    cursor: pointer;
   }
+
+  .delete:hover {
+    background-color: #8f0b2a;
+  }
+  
   
   .editBtn {
     background-color: #026cdf;
@@ -47,9 +58,21 @@
     border: none;
     text-decoration: none;
     width: 200px;
+    cursor: pointer;
   }
   
- 
+  .editBtn:hover {
+    background-color: #0663c7;
+  }
+  
+
+  @media (max-width:540px) {
+    .editBtn{
+    width: 300px;
+   }.delete{
+    width: 300px;
+   }
+   }
   
 
   .cancelBtn {
@@ -61,7 +84,23 @@
     border: 1px solid rgba(87, 65, 67, 1);
     font-size: 16px;
     width: 413px;
+    cursor: pointer;
   }
+
+  .cancelBtn:hover{
+    background-color: rgba(87, 65, 67, 1);
+    color: #FFFFFF;
+  }
+
+  @media (max-width:551px) {
+    .cancelBtn{
+    width: 350px;
+   }.creteBtn{
+    width: 350px;
+   }
+   }
+  
+
   
   
   .disabled {
