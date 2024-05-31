@@ -15,6 +15,12 @@
 - Node.js: A JavaScript runtime for building server-side applications.
 - Firebase Storage: Used to store and manage user-uploaded pictures.
 
+
+## Downloading the Project
+
+You can download the project as a zip file by clicking [here](https://github.com/GertKadiu/Pet-Task-MERN/archive/refs/heads/main.zip).
+
+
 ## Getting Started
 
 To run the project locally, follow these steps:
